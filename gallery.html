@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Malik Alexis Ibra</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <!-- ==================== HEADER SECTION ==================== -->
+    <header>
+        <h1>My Gallery</h1>
+        <p class="subtitle">Memories and Moments</p>
+    </header>
+
+    <!-- ==================== NAVIGATION SECTION ==================== -->
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Me</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="interest.html" class="nav-link">Interests</a>
+        <a href="dreams.html" class="nav-link">Dreams</a>
+    </nav>
+
+    <!-- ==================== MAIN CONTENT SECTION ==================== -->
+    <main>
+        <!-- Gallery Introduction -->
+        <section class="gallery-intro">
+            <h2>Welcome to My Gallery</h2>
+            <p>
+                This gallery contains photos of my family and my journey as an ROTC cadet. 
+                Click on any image to view it in full size.
+            </p>
+        </section>
+
+        <!-- ==================== FILTER BUTTONS ==================== -->
+        <section class="filter-section">
+            <button class="filter-btn active" onclick="filterGallery('all')">All Photos</button>
+            <button class="filter-btn" onclick="filterGallery('family')">My Family</button>
+            <button class="filter-btn" onclick="filterGallery('my-images')">My Images</button>
+        </section>
+
+        <!-- ==================== MY FAMILY SECTION ==================== -->
+        <section class="gallery-section" id="family-section" data-category="family">
+            <h2 class="section-title">&#128106; My Family</h2>
+            <div class="gallery">
+                <!-- Family Photo 1 -->
+                <div class="card gallery-item" data-category="family">
+                    <img src="images/family.jpg" alt="Family Photo" class="gallery-img" onclick="openModal(this)">
+                    <div class="card-content">
+                        <h3>Family Bonding</h3>
+                        <p>A precious moment with my family during a special occasion.</p>
+                    </div>
+                </div>
+                
+                <!-- Family Photo 2 -->
+                <div class="card gallery-item" data-category="family">
+                    <img src="images/profile.jpg" alt="With Family at Monument" class="gallery-img" onclick="openModal(this)">
+                    <div class="card-content">
+                        <h3>Family Support</h3>
+                        <p>My family has always been supportive of my ROTC journey.</p>
+                    </div>
+                </div>
+                
+                <!-- Family Photo 3 -->
+                <div class="card gallery-item" data-category="family">
+                    <img src="images/group-photo.jpg" alt="ROTC Family" class="gallery-img" onclick="openModal(this)">
+                    <div class="card-content">
+                        <h3>ROTC Family</h3>
+                        <p>My second family - my fellow cadets who support each other.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== MY IMAGES SECTION ==================== -->
+        <section class="gallery-section" id="my-images-section" data-category="my-images">
+            <h2 class="section-title">&#128248; My Images</h2>
+            <div class="gallery">
+                <!-- My Image 1 -->
+                <div class="card gallery-item" data-category="my-images">
+                    <img src="images/profile.jpg" alt="ROTC Freedom March" class="gallery-img" onclick="openModal(this)">
+                    <div class="card-content">
+                        <h3>Freedom March 2024</h3>
+                        <p>Participating in the Freedom March ceremony with pride.</p>
+                    </div>
+                </div>
+                
+                <!-- My Image 2 -->
+                <div class="card gallery-item" data-category="my-images">
+                    <img src="images/rotc-march.jpg" alt="ROTC Parade" class="gallery-img" onclick="openModal(this)">
+                    <div class="card-content">
+                        <h3>ROTC Parade</h3>
+                        <p>Marching with my fellow cadets during a parade event.</p>
+                    </div>
+                </div>
+                
+                <!-- My Image 3 -->
+                <div class="card gallery-item" data-category="my-images">
+                    <img src="images/ceremony.jpg" alt="Award Ceremony" class="gallery-img" onclick="openModal(this)">
+                    <div class="card-content">
+                        <h3>Award Ceremony</h3>
+                        <p>Recognition ceremony with our officers and commanders.</p>
+                    </div>
+                </div>
+                
+                <!-- My Image 4 -->
+                <div class="card gallery-item" data-category="my-images">
+                    <img src="images/group-photo.jpg" alt="Group Photo" class="gallery-img" onclick="openModal(this)">
+                    <div class="card-content">
+                        <h3>Cadet Group Photo</h3>
+                        <p>Group photo with all the cadets after training.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== IMAGE MODAL (LIGHTBOX) ==================== -->
+    <div id="imageModal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div class="modal-caption" id="modalCaption"></div>
+    </div>
+
+    <!-- ==================== FOOTER SECTION ==================== -->
+    <footer>
+        <p>&copy; 2026 My Portfolio | Malik Alexis M. Ibra</p>
+        <p>Computer Science Student | Interworld Colleges Foundation Inc.</p>
+    </footer>
+
+    <!-- ==================== SCROLL TO TOP BUTTON ==================== -->
+    <button id="scrollTopBtn" class="scroll-top-btn" title="Go to top">&#8679;</button>
+
+    <!-- ==================== JAVASCRIPT FILE ==================== -->
+    <script src="js/script.js"></script>
+</body>
+</html>

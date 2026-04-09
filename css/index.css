@@ -1,0 +1,281 @@
+/* ==================== INDEX.CSS ==================== */
+/* This is the main stylesheet for the Home page */
+/* Color Palette: #2c3e50 (header/footer), #34495e (nav), #f4f4f4 (bg), #f1c40f (hover) */
+
+/* ==================== GENERAL STYLES ==================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ==================== HEADER STYLES ==================== */
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.subtitle {
+    margin: 10px 0 0 0;
+    font-size: 1.1em;
+    color: #bdc3c7;
+}
+
+/* ==================== NAVIGATION STYLES ==================== */
+nav {
+    background-color: #34495e;
+    text-align: center;
+    padding: 15px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+/* Yellow underline effect on hover */
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #f1c40f;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #f1c40f;
+}
+
+/* Active page highlight */
+nav a.active {
+    color: #f1c40f;
+}
+
+nav a.active::after {
+    width: 100%;
+}
+
+/* ==================== MAIN CONTENT STYLES ==================== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ==================== BANNER/HERO SECTION ==================== */
+.banner {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container {
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #2c3e50;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+.banner h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin: 20px 0 10px 0;
+}
+
+.intro-text {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 800px;
+    margin: 15px auto;
+    line-height: 1.8;
+}
+
+/* ==================== QUICK LINKS SECTION ==================== */
+.quick-links {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.quick-links h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #2c3e50;
+    margin: 10px 0;
+    font-size: 1.3em;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.card-btn {
+    display: inline-block;
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.card-btn:hover {
+    background-color: #f1c40f;
+    color: #2c3e50;
+}
+
+/* ==================== FOOTER STYLES ==================== */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* ==================== SCROLL TO TOP BUTTON ==================== */
+.scroll-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-top-btn:hover {
+    background-color: #f1c40f;
+    color: #2c3e50;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    nav a {
+        margin: 0 8px;
+        font-size: 0.9em;
+    }
+    
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ==================== FADE ANIMATION ==================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.banner, .quick-links {
+    animation: fadeIn 0.8s ease-out;
+}

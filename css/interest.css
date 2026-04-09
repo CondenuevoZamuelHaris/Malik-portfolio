@@ -1,0 +1,266 @@
+/* ==================== INTEREST.CSS ==================== */
+/* This stylesheet is for the Interests page */
+/* Color Palette: #2c3e50 (header/footer), #34495e (nav), #f4f4f4 (bg), #f1c40f (hover) */
+
+/* ==================== GENERAL STYLES ==================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ==================== HEADER STYLES ==================== */
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.subtitle {
+    margin: 10px 0 0 0;
+    font-size: 1.1em;
+    color: #bdc3c7;
+}
+
+/* ==================== NAVIGATION STYLES ==================== */
+nav {
+    background-color: #34495e;
+    text-align: center;
+    padding: 15px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+/* Yellow underline effect on hover */
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #f1c40f;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #f1c40f;
+}
+
+/* Active page highlight */
+nav a.active {
+    color: #f1c40f;
+}
+
+nav a.active::after {
+    width: 100%;
+}
+
+/* ==================== MAIN CONTENT STYLES ==================== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ==================== INTRODUCTION SECTION ==================== */
+.interests-intro {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.interests-intro h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.interests-intro p {
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1em;
+}
+
+/* ==================== INTERESTS SECTION ==================== */
+.interests-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    color: #2c3e50;
+    font-size: 1.6em;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #f1c40f;
+    display: inline-block;
+}
+
+/* ==================== CARD CONTAINER ==================== */
+.card-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #2c3e50;
+    margin: 10px 0;
+    font-size: 1.3em;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* ==================== TAGS STYLES ==================== */
+.card-tags {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.tag {
+    background-color: #34495e;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    transition: background-color 0.3s ease;
+}
+
+.tag:hover {
+    background-color: #f1c40f;
+    color: #2c3e50;
+}
+
+/* ==================== FOOTER STYLES ==================== */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* ==================== SCROLL TO TOP BUTTON ==================== */
+.scroll-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-top-btn:hover {
+    background-color: #f1c40f;
+    color: #2c3e50;
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.interests-intro, .interests-section {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    nav a {
+        margin: 0 8px;
+        font-size: 0.9em;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .card-container {
+        justify-content: center;
+    }
+}
